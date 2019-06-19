@@ -25,6 +25,19 @@ public class Payroll
             emp=givenUser;
                  
         }
+   public double CalcSalary( )
+   {
+       double newsal=0.0;
+       if(Salary<=3000)
+       {
+           bonus=(10/100)*Salary;
+           newsal=bonus+Salary;
+       }
+       else{
+           System.out.println("nobonus Your Slary is :" +Salary);
+       }
+       return newsal;
+   }
          /**The method for calculating salary including bonus.Bonus is 10% of salary 
       */ 
         

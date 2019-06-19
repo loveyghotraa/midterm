@@ -13,17 +13,23 @@ import java.util.Scanner;
  */
 public class PayrollPrint 
 {
+    
 public static void main(String[] args) 
 {
+    String emp=null;
+    double Sal=0.0;
 /* here assumed that 50 employee accounts can be created
  for the given bank */
+Payroll out;
+out= new Payroll(Sal, emp);
 Payroll ac[]=new Payroll[50];
 Scanner sc=new Scanner(System.in);
-System.out.println("Please enter the employee name:");
+System.out.println("Please enter the employee name:" );
+emp=sc.next();
 //add code
 System.out.println("Please enter the salary: salary <=3000");
-       
-System.out.println("The final Salary including bonus is: ");         
+Sal=sc.nextDouble();
+System.out.println("The final Salary including bonus is: " +out.CalcSalary());         
 
 }
 
